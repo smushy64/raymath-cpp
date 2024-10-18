@@ -188,23 +188,23 @@ struct Vec2 {
     }
 };
 inline
-Vector2 operator+( Vector2 v1, Vector2 v2 ) {
+Vec2 operator+( Vector2 v1, Vector2 v2 ) {
     return Vector2Add( v1, v2 );
 }
 inline
-Vector2 operator-( Vector2 v1, Vector2 v2 ) {
+Vec2 operator-( Vector2 v1, Vector2 v2 ) {
     return Vector2Subtract( v1, v2 );
 }
 inline
-Vector2 operator*( Vector2 v1, float scale ) {
+Vec2 operator*( Vector2 v1, float scale ) {
     return Vector2Scale( v1, scale );
 }
 inline
-Vector2 operator*( float scale, Vector2 v1 ) {
+Vec2 operator*( float scale, Vector2 v1 ) {
     return Vector2Scale( v1, scale );
 }
 inline
-Vector2 operator/( Vector2 v1, float scale ) {
+Vec2 operator/( Vector2 v1, float scale ) {
     return Vector2Scale( v1, 1.0f / scale );
 }
 inline
@@ -240,27 +240,27 @@ float Angle( Vector2 v1, Vector2 v2 ) {
     return Vector2Angle( v1, v2 );
 }
 inline
-Vector2 Normalize( Vector2 v ) {
+Vec2 Normalize( Vector2 v ) {
     return Vector2Normalize( v );
 }
 inline
-Vector2 Lerp( Vector2 v1, Vector2 v2, float amount ) {
+Vec2 Lerp( Vector2 v1, Vector2 v2, float amount ) {
     return Vector2Lerp( v1, v2, amount );
 }
 inline
-Vector2 Reflect( Vector2 v, Vector2 normal ) {
+Vec2 Reflect( Vector2 v, Vector2 normal ) {
     return Vector2Reflect( v, normal );
 }
 inline
-Vector2 Rotate( Vector2 v, float angle ) {
+Vec2 Rotate( Vector2 v, float angle ) {
     return Vector2Rotate( v, angle );
 }
 inline
-Vector2 Clamp( Vector2 v, Vector2 min, Vector2 max ) {
+Vec2 Clamp( Vector2 v, Vector2 min, Vector2 max ) {
     return Vector2Clamp( v, min, max );
 }
 inline
-Vector2 Clamp( Vector2 v, float min, float max ) {
+Vec2 Clamp( Vector2 v, float min, float max ) {
     return Vector2ClampValue( v, min, max );
 }
 
@@ -489,27 +489,27 @@ struct Vec3 {
     }
 };
 inline
-Vector3 operator+( Vector3 v1, Vector3 v2 ) {
+Vec3 operator+( Vector3 v1, Vector3 v2 ) {
     return Vector3Add( v1, v2 );
 }
 inline
-Vector3 operator-( Vector3 v1, Vector3 v2 ) {
+Vec3 operator-( Vector3 v1, Vector3 v2 ) {
     return Vector3Subtract( v1, v2 );
 }
 inline
-Vector3 operator*( Vector3 v1, float scale ) {
+Vec3 operator*( Vector3 v1, float scale ) {
     return Vector3Scale( v1, scale );
 }
 inline
-Vector3 operator*( float scale, Vector3 v1 ) {
+Vec3 operator*( float scale, Vector3 v1 ) {
     return Vector3Scale( v1, scale );
 }
 inline
-Vector3 operator*( Vector3 lhs, const Matrix& rhs ) {
+Vec3 operator*( Vector3 lhs, const Matrix& rhs ) {
     return Vector3Transform( lhs, rhs );
 }
 inline
-Vector3 operator/( Vector3 v1, float scale ) {
+Vec3 operator/( Vector3 v1, float scale ) {
     return Vector3Scale( v1, 1.0f / scale );
 }
 inline
@@ -533,7 +533,7 @@ float DotProduct( Vector3 v1, Vector3 v2 ) {
     return Vector3DotProduct( v1, v2 );
 }
 inline
-Vector3 CrossProduct( Vector3 v1, Vector3 v2 ) {
+Vec3 CrossProduct( Vector3 v1, Vector3 v2 ) {
     return Vector3CrossProduct( v1, v2 );
 }
 inline
@@ -549,35 +549,35 @@ float Angle( Vector3 v1, Vector3 v2 ) {
     return Vector3Angle( v1, v2 );
 }
 inline
-Vector3 Normalize( Vector3 v ) {
+Vec3 Normalize( Vector3 v ) {
     return Vector3Normalize( v );
 }
 inline
-Vector3 MoveTowards( Vector3 v, Vector3 target, float maxDistance ) {
+Vec3 MoveTowards( Vector3 v, Vector3 target, float maxDistance ) {
     return Vector3MoveTowards( v, target, maxDistance );
 }
 inline
-Vector3 Lerp( Vector3 v1, Vector3 v2, float amount ) {
+Vec3 Lerp( Vector3 v1, Vector3 v2, float amount ) {
     return Vector3Lerp( v1, v2, amount );
 }
 inline
-Vector3 Reflect( Vector3 v, Vector3 normal ) {
+Vec3 Reflect( Vector3 v, Vector3 normal ) {
     return Vector3Reflect( v, normal );
 }
 inline
-Vector3 Rotate( Vector3 v, Quaternion q ) {
+Vec3 Rotate( Vector3 v, Quaternion q ) {
     return Vector3RotateByQuaternion( v, q );
 }
 inline
-Vector3 Rotate( Vector3 v, Vector3 axis, float angle ) {
+Vec3 Rotate( Vector3 v, Vector3 axis, float angle ) {
     return Vector3RotateByAxisAngle( v, axis, angle );
 }
 inline
-Vector3 Clamp( Vector3 v, Vector3 min, Vector3 max ) {
+Vec3 Clamp( Vector3 v, Vector3 min, Vector3 max ) {
     return Vector3Clamp( v, min, max );
 }
 inline
-Vector3 Clamp( Vector3 v, float min, float max ) {
+Vec3 Clamp( Vector3 v, float min, float max ) {
     return Vector3ClampValue( v, min, max );
 }
 
@@ -768,15 +768,15 @@ float DistanceSqr( Vector4 v1, Vector4 v2 ) {
     return Vector4DistanceSqr( v1, v2 );
 }
 inline
-Vector4 Normalize( Vector4 v ) {
+Vec4 Normalize( Vector4 v ) {
     return Vector4Normalize( v );
 }
 inline
-Vector4 MoveTowards( Vector4 v, Vector4 target, float maxDistance ) {
+Vec4 MoveTowards( Vector4 v, Vector4 target, float maxDistance ) {
     return Vector4MoveTowards( v, target, maxDistance );
 }
 inline
-Vector4 Lerp( Vector4 v1, Vector4 v2, float amount ) {
+Vec4 Lerp( Vector4 v1, Vector4 v2, float amount ) {
     return Vector4Lerp( v1, v2, amount );
 }
 
@@ -962,15 +962,15 @@ struct Mat4 {
     }
 };
 inline
-Matrix operator+( const Matrix& left, const Matrix& right ) {
+Mat4 operator+( const Matrix& left, const Matrix& right ) {
     return MatrixAdd( left, right );
 }
 inline
-Matrix operator-( const Matrix& left, const Matrix& right ) {
+Mat4 operator-( const Matrix& left, const Matrix& right ) {
     return MatrixSubtract( left, right );
 }
 inline
-Matrix operator*( const Matrix& left, const Matrix& right ) {
+Mat4 operator*( const Matrix& left, const Matrix& right ) {
     Matrix result = {};
 
     // NOTE(alicia): copied from raymath.h
@@ -1096,7 +1096,7 @@ struct Quat {
         return QuaternionSlerp( *this, q2, amount );
     }
     inline
-    Matrix ToMatrix() const {
+    Mat4 ToMatrix() const {
         return QuaternionToMatrix( *this );
     }
     inline
@@ -1108,7 +1108,7 @@ struct Quat {
         QuaternionToAxisAngle( *this, (Vector3*)outAxis, outAngle );
     }
     inline
-    Vector3 ToEuler() const {
+    Vec3 ToEuler() const {
         return QuaternionToEuler( *this );
     }
     inline
@@ -1121,27 +1121,27 @@ struct Quat {
     }
 };
 inline
-Quaternion operator+( Quaternion v1, Quaternion v2 ) {
+Quat operator+( Quaternion v1, Quaternion v2 ) {
     return QuaternionAdd( v1, v2 );
 }
 inline
-Quaternion operator-( Quaternion v1, Quaternion v2 ) {
+Quat operator-( Quaternion v1, Quaternion v2 ) {
     return QuaternionSubtract( v1, v2 );
 }
 inline
-Quaternion operator*( Quaternion v1, float scale ) {
+Quat operator*( Quaternion v1, float scale ) {
     return QuaternionScale( v1, scale );
 }
 inline
-Quaternion operator*( float scale, Quaternion v1 ) {
+Quat operator*( float scale, Quaternion v1 ) {
     return QuaternionScale( v1, scale );
 }
 inline
-Quaternion operator*( Quaternion lhs, const Matrix& rhs ) {
+Quat operator*( Quaternion lhs, const Matrix& rhs ) {
     return QuaternionTransform( lhs, rhs );
 }
 inline
-Quaternion operator/( Quaternion v1, float scale ) {
+Quat operator/( Quaternion v1, float scale ) {
     return QuaternionScale( v1, 1.0f / scale );
 }
 inline
@@ -1153,11 +1153,11 @@ bool operator!=( Quaternion p, Quaternion q ) {
     return !( p == q );
 }
 inline
-Quaternion Nlerp( Quaternion q1, Quaternion q2, float amount ) {
+Quat Nlerp( Quaternion q1, Quaternion q2, float amount ) {
     return QuaternionNlerp( q1, q2, amount );
 }
 inline
-Quaternion Slerp( Quaternion q1, Quaternion q2, float amount ) {
+Quat Slerp( Quaternion q1, Quaternion q2, float amount ) {
     return QuaternionSlerp( q1, q2, amount );
 }
 // NOTE(alicia):
