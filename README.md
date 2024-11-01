@@ -1,5 +1,9 @@
-Raymath C++ Extension
+Raymath C++ Extension -- ARCHIVED
 ======================
+
+[!WARNING]
+It seems that raymath now has C++ operator overloading so
+this is no longer necessary.
 
 This is a header that implements
 swizzling, function overloading and
